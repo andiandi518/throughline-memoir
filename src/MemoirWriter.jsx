@@ -154,7 +154,7 @@ export default function MemoirWriter() {
       }}>
         <div style={{ maxWidth: 480, textAlign: "center" }}>
           <h1 style={{ fontSize: 28, fontWeight: 400, fontStyle: "italic", margin: "0 0 16px" }}>
-            Through Line Memoir
+            My Throughline
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.6, color: COLORS.textLight }}>{error}</p>
         </div>
@@ -188,7 +188,7 @@ export default function MemoirWriter() {
           <button onClick={handleKeepWriting} style={{
             padding: "16px 36px", borderRadius: 10, border: `1px solid ${COLORS.border}`,
             backgroundColor: COLORS.cardBg, color: COLORS.text, fontSize: 17,
-            fontFamily: "'Trebuchet MS', sans-serif", cursor: "pointer", minHeight: 52, minWidth: 220,
+            fontFamily: "'Poppins', sans-serif", cursor: "pointer", minHeight: 52, minWidth: 220,
           }}>
             Wait, I want to add more
           </button>
@@ -208,7 +208,7 @@ export default function MemoirWriter() {
         padding: "16px 28px", borderBottom: `1px solid ${COLORS.border}`,
         display: "flex", justifyContent: "space-between", alignItems: "center", flexShrink: 0,
       }}>
-        <p style={{ fontSize: 15, color: COLORS.textLight, margin: 0, fontFamily: "'Trebuchet MS', sans-serif" }}>
+        <p style={{ fontSize: 15, color: COLORS.textLight, margin: 0, fontFamily: "'Poppins', sans-serif" }}>
           {weekNumber ? `Week ${weekNumber}` : ""}
         </p>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
@@ -218,27 +218,27 @@ export default function MemoirWriter() {
                 width: 8, height: 8, borderRadius: "50%", backgroundColor: COLORS.accent,
                 animation: "pulse 1s infinite",
               }} />
-              <span style={{ fontSize: 13, color: COLORS.textLight, fontFamily: "'Trebuchet MS', sans-serif" }}>Saving…</span>
+              <span style={{ fontSize: 13, color: COLORS.textLight, fontFamily: "'Poppins', sans-serif" }}>Saving…</span>
             </div>
           )}
           {saveState === "saved" && (
             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <div style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: COLORS.green }} />
-              <span style={{ fontSize: 13, color: COLORS.green, fontFamily: "'Trebuchet MS', sans-serif" }}>Saved</span>
+              <span style={{ fontSize: 13, color: COLORS.green, fontFamily: "'Poppins', sans-serif" }}>Saved</span>
             </div>
           )}
           {saveState === "error" && (
-            <span style={{ fontSize: 13, color: "#C44", fontFamily: "'Trebuchet MS', sans-serif" }}>
+            <span style={{ fontSize: 13, color: "#C44", fontFamily: "'Poppins', sans-serif" }}>
               Couldn't save — will retry
             </span>
           )}
           {saveState === "idle" && lastSaved && (
-            <span style={{ fontSize: 13, color: COLORS.textLight, fontFamily: "'Trebuchet MS', sans-serif" }}>
+            <span style={{ fontSize: 13, color: COLORS.textLight, fontFamily: "'Poppins', sans-serif" }}>
               Last saved {formatTime(lastSaved)}
             </span>
           )}
           {saveState === "idle" && !lastSaved && text === "" && (
-            <span style={{ fontSize: 13, color: COLORS.textLight, fontFamily: "'Trebuchet MS', sans-serif" }}>
+            <span style={{ fontSize: 13, color: COLORS.textLight, fontFamily: "'Poppins', sans-serif" }}>
               Your work saves automatically
             </span>
           )}
@@ -258,7 +258,7 @@ export default function MemoirWriter() {
           }}>
             <p style={{
               fontSize: 14, color: COLORS.accent, margin: "0 0 6px",
-              fontFamily: "'Trebuchet MS', sans-serif", fontWeight: 600,
+              fontFamily: "'Poppins', sans-serif", fontWeight: 600,
               textTransform: "uppercase", letterSpacing: "0.05em",
             }}>This Week's Prompt</p>
             <p style={{ fontSize: 20, lineHeight: 1.5, margin: 0, fontStyle: "italic", color: COLORS.text }}>
@@ -293,13 +293,13 @@ export default function MemoirWriter() {
           display: "flex", justifyContent: "space-between", alignItems: "center",
           padding: "16px 0 32px", borderTop: `1px solid ${COLORS.border}`, flexShrink: 0,
         }}>
-          <p style={{ fontSize: 15, color: COLORS.textLight, margin: 0, fontFamily: "'Trebuchet MS', sans-serif" }}>
+          <p style={{ fontSize: 15, color: COLORS.textLight, margin: 0, fontFamily: "'Poppins', sans-serif" }}>
             {wordCount > 0 ? `${wordCount} word${wordCount === 1 ? "" : "s"}` : "Take your time — there's no rush."}
           </p>
           <button onClick={handleFinish} style={{
             padding: "16px 36px", borderRadius: 10, border: "none",
             backgroundColor: COLORS.accent, color: "#FFFEFA", fontSize: 17,
-            fontWeight: 500, fontFamily: "'Trebuchet MS', sans-serif",
+            fontWeight: 500, fontFamily: "'Poppins', sans-serif",
             cursor: "pointer", minHeight: 52, transition: "all 0.2s ease",
           }}>
             I'm done for now
