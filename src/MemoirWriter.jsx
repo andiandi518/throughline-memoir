@@ -97,6 +97,7 @@ export default function MemoirWriter() {
         }
 
         // Load the linked prompt
+        console.log("Entry fields:", JSON.stringify(entry.fields));
         const promptIds = entry.fields["Prompt"];
         if (promptIds && promptIds.length > 0) {
           const promptData = await fetchPrompt(promptIds[0]);
