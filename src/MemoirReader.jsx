@@ -130,7 +130,7 @@ export default function MemoirReader() {
             }}>My Throughline</h1>
             <p style={{
               fontSize: 15, color: COLORS.textLight, margin: "4px 0 0",
-              fontFamily: "'Poppins', sans-serif",
+              fontFamily: "'Inter', sans-serif",
             }}>{entries.length} {entries.length === 1 ? "entry" : "entries"} written</p>
           </div>
           <div style={{
@@ -142,7 +142,7 @@ export default function MemoirReader() {
             ].map(({ key, label }) => (
               <button key={key} onClick={() => setViewMode(key)} style={{
                 padding: "10px 18px", borderRadius: 8, border: "none", fontSize: 15,
-                fontFamily: "'Poppins', sans-serif", cursor: "pointer",
+                fontFamily: "'Inter', sans-serif", cursor: "pointer",
                 backgroundColor: viewMode === key ? COLORS.cardBg : "transparent",
                 color: viewMode === key ? COLORS.text : COLORS.textLight,
                 boxShadow: viewMode === key ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
@@ -160,7 +160,7 @@ export default function MemoirReader() {
         {viewMode === "single" ? (
           <div>
             <div style={{
-              textAlign: "center", marginBottom: 32, fontFamily: "'Poppins', sans-serif",
+              textAlign: "center", marginBottom: 32, fontFamily: "'Inter', sans-serif",
               fontSize: 14, color: COLORS.textLight, letterSpacing: "0.05em", textTransform: "uppercase",
             }}>Entry {currentIndex + 1} of {entries.length}</div>
 
@@ -171,7 +171,7 @@ export default function MemoirReader() {
               }}>
                 <p style={{
                   fontSize: 14, color: COLORS.accent, margin: "0 0 6px",
-                  fontFamily: "'Poppins', sans-serif", fontWeight: 600,
+                  fontFamily: "'Inter', sans-serif", fontWeight: 600,
                   textTransform: "uppercase", letterSpacing: "0.05em",
                 }}>The Prompt</p>
                 <p style={{ fontSize: 19, lineHeight: 1.5, margin: 0, fontStyle: "italic", color: COLORS.text }}>
@@ -181,7 +181,7 @@ export default function MemoirReader() {
             )}
 
             <p style={{
-              fontSize: 15, color: COLORS.textLight, fontFamily: "'Poppins', sans-serif", marginBottom: 16,
+              fontSize: 15, color: COLORS.textLight, fontFamily: "'Inter', sans-serif", marginBottom: 16,
             }}>{formatDate(entry.date)}</p>
 
             <div style={{ marginBottom: 48 }}>
@@ -200,7 +200,7 @@ export default function MemoirReader() {
                 padding: "16px 32px", borderRadius: 10, border: `1px solid ${COLORS.border}`,
                 backgroundColor: currentIndex === 0 ? COLORS.navBg : COLORS.cardBg,
                 color: currentIndex === 0 ? COLORS.textLight : COLORS.text,
-                fontSize: 17, fontFamily: "'Poppins', sans-serif",
+                fontSize: 17, fontFamily: "'Inter', sans-serif",
                 cursor: currentIndex === 0 ? "default" : "pointer",
                 opacity: currentIndex === 0 ? 0.4 : 1, minHeight: 52, minWidth: 120,
                 transition: "all 0.2s ease",
@@ -209,7 +209,7 @@ export default function MemoirReader() {
                 padding: "16px 32px", borderRadius: 10, border: `1px solid ${COLORS.border}`,
                 backgroundColor: currentIndex === entries.length - 1 ? COLORS.navBg : COLORS.cardBg,
                 color: currentIndex === entries.length - 1 ? COLORS.textLight : COLORS.text,
-                fontSize: 17, fontFamily: "'Poppins', sans-serif",
+                fontSize: 17, fontFamily: "'Inter', sans-serif",
                 cursor: currentIndex === entries.length - 1 ? "default" : "pointer",
                 opacity: currentIndex === entries.length - 1 ? 0.4 : 1, minHeight: 52, minWidth: 120,
                 transition: "all 0.2s ease",
@@ -230,7 +230,7 @@ export default function MemoirReader() {
                   }}>
                     <p style={{
                       fontSize: 13, color: COLORS.accent, margin: "0 0 4px",
-                      fontFamily: "'Poppins', sans-serif", fontWeight: 600,
+                      fontFamily: "'Inter', sans-serif", fontWeight: 600,
                       textTransform: "uppercase", letterSpacing: "0.05em",
                     }}>The Prompt</p>
                     <p style={{ fontSize: 18, lineHeight: 1.5, margin: 0, fontStyle: "italic" }}>
@@ -239,7 +239,7 @@ export default function MemoirReader() {
                   </div>
                 )}
                 <p style={{
-                  fontSize: 14, color: COLORS.textLight, fontFamily: "'Poppins', sans-serif", marginBottom: 14,
+                  fontSize: 14, color: COLORS.textLight, fontFamily: "'Inter', sans-serif", marginBottom: 14,
                 }}>{formatDate(e.date)}</p>
                 {e.response.split("\n\n").map((paragraph, j) => (
                   <p key={j} style={{ fontSize: 21, lineHeight: 1.75, margin: "0 0 22px", color: COLORS.text }}>

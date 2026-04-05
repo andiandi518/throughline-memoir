@@ -186,7 +186,7 @@ const QUESTIONS = [
     field: "Anything else",
     type: "long",
     title: "One last thing",
-    question: "Is there anything you want me to know before we start?",
+    question: "Is there anything else you'd like to share before we start?",
     subtitle: "Anything at all. Something you're excited about, something you're nervous about, a story you've been carrying, a question you have. This is just for us.",
     placeholder: "Whatever you'd like to share...",
     optional: true,
@@ -300,11 +300,19 @@ export default function MemoirIntake() {
             Thank you.
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 12px" }}>
-            Your answers will help us create a writing journey that's truly yours.
+            Your answers will help create a writing journey that's truly yours.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 12px" }}>
-            We'll prepare your personalized prompts and be in touch soon with your first one. In the meantime — that place you described, the people you named, the sentence you wrote — hold onto those. They're the beginning.
+            We'll prepare your personalized prompts and be in touch soon with your first one. In the meantime—that place you described, the people you named, the sentence you wrote: hold onto those. They're the beginning.
           </p>
+          <button onClick={() => { window.location.hash = "freewrite"; }} style={{
+            padding: "16px 36px", borderRadius: 10, border: "none",
+            backgroundColor: COLORS.accent, color: "#FFFEFA", fontSize: 17,
+            fontWeight: 500, fontFamily: "'Inter', sans-serif",
+            cursor: "pointer", minHeight: 52, marginTop: 24,
+          }}>
+            Can't wait to get started? Start writing now!
+          </button>
         </div>
       </div>
     );
@@ -333,14 +341,14 @@ export default function MemoirIntake() {
       }}>
         <p style={{
           fontSize: 15, color: COLORS.textLight, margin: 0,
-          fontFamily: "'Poppins', sans-serif",
+          fontFamily: "'Inter', sans-serif",
         }}>
           {currentStep + 1} of {totalSteps}
         </p>
         {currentStep > 0 && (
           <button onClick={goBack} style={{
             background: "none", border: "none", color: COLORS.textLight,
-            fontSize: 15, cursor: "pointer", fontFamily: "'Poppins', sans-serif",
+            fontSize: 15, cursor: "pointer", fontFamily: "'Inter', sans-serif",
             minHeight: 44,
           }}>← Back</button>
         )}
@@ -353,7 +361,7 @@ export default function MemoirIntake() {
       }}>
         <p style={{
           fontSize: 14, color: COLORS.accent, margin: "0 0 8px",
-          fontFamily: "'Poppins', sans-serif", fontWeight: 600,
+          fontFamily: "'Inter', sans-serif", fontWeight: 600,
           textTransform: "uppercase", letterSpacing: "0.05em",
         }}>{question.title}</p>
 
@@ -468,7 +476,7 @@ export default function MemoirIntake() {
               padding: "16px 36px", borderRadius: 10, border: "none",
               backgroundColor: canProceed() && !isSubmitting ? COLORS.accent : COLORS.border,
               color: canProceed() && !isSubmitting ? "#FFFEFA" : COLORS.textLight,
-              fontSize: 17, fontWeight: 500, fontFamily: "'Poppins', sans-serif",
+              fontSize: 17, fontWeight: 500, fontFamily: "'Inter', sans-serif",
               cursor: canProceed() && !isSubmitting ? "pointer" : "default",
               minHeight: 52, transition: "all 0.2s ease",
             }}
@@ -480,7 +488,7 @@ export default function MemoirIntake() {
         {question.optional && question.type === "long" && currentAnswer === "" && (
           <p style={{
             fontSize: 14, color: COLORS.textLight, margin: "12px 0 0",
-            fontFamily: "'Poppins', sans-serif", textAlign: "right",
+            fontFamily: "'Inter', sans-serif", textAlign: "right",
           }}>
             This one's optional — skip it if you'd like
           </p>
