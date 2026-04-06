@@ -3,9 +3,10 @@ import MemoirWriter from "./MemoirWriter";
 import MemoirReader from "./MemoirReader";
 import MemoirIntake from "./MemoirIntake";
 import MemoirFreeWrite from "./MemoirFreeWrite";
+import LandingPage from "./LandingPage";
 
 export default function App() {
-  const [page, setPage] = useState("write");
+  const [page, setPage] = useState("landing");
 
   useEffect(() => {
     const handleRoute = () => {
@@ -15,7 +16,8 @@ export default function App() {
       if (hash === "read") setPage("read");
       else if (hash === "intake" || params.get("intake") === "true") setPage("intake");
       else if (hash === "freewrite") setPage("freewrite");
-      else setPage("write");
+      else if (params.get("entry")) setPage("write");
+      else setPage("landing");
     };
     handleRoute();
     window.addEventListener("hashchange", handleRoute);
@@ -25,5 +27,6 @@ export default function App() {
   if (page === "read") return <MemoirReader />;
   if (page === "intake") return <MemoirIntake />;
   if (page === "freewrite") return <MemoirFreeWrite />;
-  return <MemoirWriter />;
+  if (page === "write") return <MemoirWriter />;
+  return <LandingPage />;
 }
