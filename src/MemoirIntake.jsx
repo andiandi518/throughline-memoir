@@ -466,7 +466,15 @@ export default function MemoirIntake() {
             })}
           </div>
         )}
-
+        
+{question.optional && question.type === "long" && currentAnswer === "" && (
+          <p style={{
+            fontSize: 14, color: COLORS.textLight, margin: "12px 0 0",
+            fontFamily: "'Inter', sans-serif", textAlign: "right",
+          }}>
+            This one's optional — skip it if you'd like
+          </p>
+        )}
         {/* Next / Submit button */}
         <div style={{ marginTop: 32, display: "flex", justifyContent: "flex-end" }}>
           <button
@@ -485,14 +493,7 @@ export default function MemoirIntake() {
           </button>
         </div>
 
-        {question.optional && question.type === "long" && currentAnswer === "" && (
-          <p style={{
-            fontSize: 14, color: COLORS.textLight, margin: "12px 0 0",
-            fontFamily: "'Inter', sans-serif", textAlign: "right",
-          }}>
-            This one's optional — skip it if you'd like
-          </p>
-        )}
+        
       </div>
 
       <style>{`
