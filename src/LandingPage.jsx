@@ -429,19 +429,26 @@ export default function LandingPage() {
             Join the list and be the first to know when Throughline Memoir opens to writers.
           </p>
 
-          <div
-            dangerouslySetInnerHTML={{ __html: `
-              <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-              <iframe
-                src="https://subscribe-forms.beehiiv.com/3bb1cd12-b3ce-4207-8464-d54ea2cf7501"
-                class="beehiiv-embed"
-                data-test-id="beehiiv-embed"
-                frameborder="0"
-                scrolling="no"
-                style="width: 560px; height: 207px; margin: 0; border-radius: 0px; background-color: transparent; box-shadow: none; max-width: 100%;"
-              ></iframe>
-            `}}
-          />
+          <a href="https://magic.beehiiv.com/v1/4a1be6fa-9616-4a98-b569-fd48cb1dff5b?email={{email}}&redirect_to=https%3A%2F%2Fthroughlinememoir.com%2F"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              padding: "16px 36px",
+              fontSize: 17,
+              fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
+              fontWeight: 500,
+              backgroundColor: "#B8860B",
+              color: "#FFFEFA",
+              border: "none",
+              borderRadius: 10,
+              cursor: "pointer",
+              textDecoration: "none",
+            }}
+          >
+            Get notified
+          </a>
+          
         </FadeSection>
       </section>
 
