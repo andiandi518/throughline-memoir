@@ -6,7 +6,7 @@ export default function LandingPage() {
 
   const handleSubmit = () => {
     if (!email || !email.includes("@")) return;
-    const url = "https://magic.beehiiv.com/v1/4a1be6fa-9616-4a98-b569-fd48cb1dff5b?email={{email}}&redirect_to=https%3A%2F%2Fwww.throughlinememoir.com" + encodeURIComponent(email);
+    const url = "https://magic.beehiiv.com/v1/4a1be6fa-9616-4a98-b569-fd48cb1dff5b?email=" + encodeURIComponent(email);
     window.open(url, "_blank");
     setSubmitted(true);
   };
@@ -94,7 +94,7 @@ export default function LandingPage() {
           marginTop: 28,
           textAlign: "center",
         }}>
-          Check your email to confirm — and we'll be in touch.
+          Check your email to confirm. We'll be in touch!
         </p>
       )}
     </div>
