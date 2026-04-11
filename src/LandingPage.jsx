@@ -180,7 +180,7 @@ export default function LandingPage() {
               {
                 number: "01",
                 title: "You start with an intake",
-                description: "Fourteen questions that help us understand your territory—the people, places, and experiences you want to explore. Your answers shape everything that follows.",
+                description: "A short questionnaire to help understand your territory—the people, places, and experiences you want to explore. Your answers shape everything that follows.",
               },
               {
                 number: "02",

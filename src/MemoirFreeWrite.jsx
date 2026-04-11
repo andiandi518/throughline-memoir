@@ -135,7 +135,7 @@ export default function MemoirFreeWrite() {
             Beautifully done.
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 8px" }}>
-            You wrote {wordCount} words.
+            You wrote {wordCount} word{wordCount === 1 ? "" : "s"}.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 32px" }}>
             Everything is saved. Your first personalized prompt is on its way soon. What you just wrote will help shape it.

@@ -25,9 +25,18 @@ const QUESTIONS = [
     field: "Writer Name",
     type: "text",
     title: "Before we begin...",
-    question: "What's your name?",
+    question: "What’s your name?",
     subtitle: "Just your first name is fine.",
     placeholder: "Your name"
+  },
+    {
+    id: "email",
+    field: "Email",
+    type: "text",
+    title: "Before we begin...",
+    question: "What\u2019s your email address?",
+    subtitle: "This is where we\u2019ll send your weekly writing prompts.",
+    placeholder: "Your email address"
   },
   {
     id: "experience",
@@ -38,8 +47,8 @@ const QUESTIONS = [
     options: [
       "No, this is new for me",
       "A little — journals, letters, that sort of thing",
-      "Yes — I've done Storyworth or something similar",
-      "Yes — I've been working on a memoir or personal essays"
+      "Yes — I’ve done Storyworth or something similar",
+      "Yes — I’ve been working on a memoir or personal essays"
     ]
   },
   {
@@ -49,7 +58,7 @@ const QUESTIONS = [
     title: "Starting to think",
     question: "When you imagine writing about your life, what comes to mind first?",
     subtitle:
-      "Write whatever surfaces — a time period, a person, a place, an image, a feeling. There's no wrong answer. If nothing specific comes to mind, that's okay too — just describe what draws you to the idea of writing about your life.",
+      "Write whatever surfaces—a time period, a person, a place, an image, a feeling. There’s no wrong answer. If nothing specific comes to mind, that’s okay, too—just describe what draws you to the idea of writing about your life.",
     placeholder: "Whatever comes to mind..."
   },
   {
@@ -57,7 +66,7 @@ const QUESTIONS = [
     field: "Life Periods",
     type: "multi",
     title: "Where in time",
-    question: "Is there a particular period of your life you're drawn to?",
+    question: "Is there a particular period of your life you’re drawn to?",
     subtitle: "Choose as many as feel right.",
     options: [
       "Childhood",
@@ -68,7 +77,7 @@ const QUESTIONS = [
       "Career / professional life",
       "A period of major change or loss",
       "Later life / where I am now",
-      "I'm not sure yet — I want to explore"
+      "I’m not sure yet — I want to explore"
     ]
   },
   {
@@ -76,10 +85,10 @@ const QUESTIONS = [
     field: "First place you see",
     type: "long",
     title: "A first image",
-    question: "Close your eyes for a moment. What's the first place from your past that you can see clearly?",
+    question: "Think about the first place that comes to mind when you think about your story.",
     subtitle:
-      "Describe it — what does it look like, smell like, sound like? You don't need to explain why it matters. Just describe the place.",
-    placeholder: "The place you see..."
+      "What do you notice—a sound, a smell, something you can feel, something you can see? Describe whatever comes to you, in whatever sense it arrives.",
+    placeholder: "The place that comes to mind..."
   },
   {
     id: "people",
@@ -88,7 +97,7 @@ const QUESTIONS = [
     title: "The people",
     question: "Who are the people in this story?",
     subtitle:
-      "List whoever comes to mind — family, friends, neighbors, strangers who mattered. You can just write names and a word or two about who they are. Or write more if you want.",
+      "List whoever comes to mind—family, friends, neighbors, strangers who mattered. You can just write names and a word or two about who they are. Or write more if you want.",
     placeholder: "The people who come to mind..."
   },
   {
@@ -96,8 +105,8 @@ const QUESTIONS = [
     field: "One person",
     type: "long",
     title: "One person",
-    question: "Is there one person you find yourself wanting to write about — or needing to write about?",
-    subtitle: "If so, who? And what's one word for your relationship with them?",
+    question: "Is there one person you find yourself wanting to write about—or needing to write about?",
+    subtitle: "If so, who? And what’s one word for your relationship with them?",
     placeholder: "The person, and one word..."
   },
   {
@@ -105,9 +114,9 @@ const QUESTIONS = [
     field: "Worried about writing about",
     type: "long",
     title: "A gentle question",
-    question: "Is there anyone you're worried about writing about?",
+    question: "Is there anyone you’re worried about writing about?",
     subtitle:
-      'You don\'t have to say why. Just a name or a relationship (e.g., "my sister," "my ex-husband"). If there\'s no one, just skip this one.',
+      'You don\’t have to say why. Just a name or a relationship (e.g., “my sister,” “my ex-husband”). If there\’s no one, just skip this one.',
     placeholder: "Optional...",
     optional: true
   },
@@ -117,7 +126,7 @@ const QUESTIONS = [
     type: "long",
     title: "The big question",
     question: "If you had to describe what you want to write about in one sentence, what would you say?",
-    subtitle: "Don't worry about getting it right. This will probably change. Just put down what feels true right now.",
+    subtitle: "Don’t worry about getting it right. This will probably change. Just put down what feels true right now.",
     placeholder: "One sentence..."
   },
   {
@@ -127,7 +136,7 @@ const QUESTIONS = [
     title: "Why now",
     question: "What is it about this moment in your life that makes you want to write this?",
     subtitle:
-      "Something may have happened recently, or it may be a feeling that's been building. Or maybe someone asked you to. Whatever the reason — why now?",
+      "Something may have happened recently, or it may be a feeling that’s been building. Or maybe someone asked you to. Whatever the reason—why now?",
     placeholder: "Why now..."
   },
   {
@@ -143,7 +152,7 @@ const QUESTIONS = [
       "I want to write a book that others might read",
       "I want to process something difficult",
       "I want to preserve stories that would be lost otherwise",
-      "I'm not sure — I just want to start"
+      "I’m not sure — I just want to start"
     ]
   },
   {
@@ -154,13 +163,13 @@ const QUESTIONS = [
     question: "When you think about writing, what feels hardest?",
     subtitle: "Choose as many as apply.",
     options: [
-      "Getting started — I don't know where to begin",
-      "Keeping going — I start things but don't finish",
-      "Being honest — I'm afraid of what might come out",
-      "Organization — I don't know how to shape it",
+      "Getting started — I don’t know where to begin",
+      "Keeping going — I start things but don’t finish",
+      "Being honest — I’m afraid of what might come out",
+      "Organization — I don’t know how to shape it",
       "The blank page — I freeze when I sit down to write",
       "Worrying about what others will think",
-      "I'm not sure — I haven't tried yet"
+      "I’m not sure — I haven’t tried yet"
     ]
   },
   {
@@ -170,7 +179,7 @@ const QUESTIONS = [
     title: "You and writing",
     question: "How would you describe your relationship with writing?",
     subtitle:
-      'A sentence or two is fine. "I\'ve always loved it." "I haven\'t written anything since school." "I write emails and that\'s about it." Whatever\'s true.',
+      'A sentence or two is fine. “I\’ve always loved it.” “I haven\’t written anything since school.” “I write emails and that\’s about it.” Whatever\’s true.',
     placeholder: "Your relationship with writing..."
   },
   {
@@ -178,7 +187,7 @@ const QUESTIONS = [
     field: "Time per week",
     type: "single",
     title: "Practical matters",
-    question: "How much time do you think you'll want to spend writing each week?",
+    question: "How much time do you think you’ll want to spend writing each week?",
     options: ["15–20 minutes", "30 minutes", "An hour", "More than an hour", "I have no idea"]
   },
   {
@@ -186,10 +195,10 @@ const QUESTIONS = [
     field: "Anything else",
     type: "long",
     title: "One last thing",
-    question: "Is there anything else you'd like to share before we start?",
+    question: "Is there anything else you’d like to share before we start?",
     subtitle:
-      "Anything at all. Something you're excited about, something you're nervous about, a story you've been carrying, a question you have. This is just for us.",
-    placeholder: "Whatever you'd like to share...",
+      "Anything at all. Something you’re excited about, something you’re nervous about, a story you’ve been carrying, a question you have.",
+    placeholder: "Whatever you’d like to share...",
     optional: true
   }
 ];
@@ -209,7 +218,10 @@ export default function MemoirIntake() {
 
   const canProceed = () => {
     if (question.optional) return true;
-    if (question.type === "multi") return true; // multi-select can be empty
+    if (question.type === "multi") {
+      const current = answers[question.id] || [];
+      return current.length > 0;
+    }
     if (question.type === "single") return currentAnswer !== "";
     return currentAnswer.trim() !== "";
   };
@@ -314,11 +326,11 @@ export default function MemoirIntake() {
           </div>
           <h1 style={{ fontSize: 28, fontWeight: 400, fontStyle: "italic", margin: "0 0 16px" }}>Thank you.</h1>
           <p style={{ fontSize: 19, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 12px" }}>
-            Your answers will help create a writing journey that's truly yours.
+            Your answers will help create a writing journey that’s truly yours.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 12px" }}>
-            We'll prepare your personalized prompts and be in touch soon with your first one. In the meantime—that place
-            you described, the people you named, the sentence you wrote: hold onto those. They're the beginning.
+            We’ll prepare your personalized prompts and be in touch soon with your first one. In the meantime—that place
+            you described, the people you named, the sentence you wrote: hold onto those. They’re the beginning.
           </p>
           <button
             onClick={() => {
@@ -337,7 +349,7 @@ export default function MemoirIntake() {
               minHeight: 52,
               marginTop: 24
             }}>
-            Can't wait to get started? Start writing now!
+            Can’t wait to get started? Start writing now!
           </button>
         </div>
       </div>
