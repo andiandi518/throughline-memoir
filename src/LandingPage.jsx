@@ -76,7 +76,7 @@ export default function LandingPage() {
           lineHeight: 1.6,
           maxWidth: 500,
         }}>
-          A guided memoir writing program.<br />
+          Crafting memoir from memories.<br />
           From first prompt to published book.
         </p>
         <div style={{
@@ -112,7 +112,7 @@ export default function LandingPage() {
             The problem
           </h2>
           <p style={{ fontSize: 22, lineHeight: 1.7, marginBottom: 28 }}>
-            Everyone has a story worth telling, but if you're not a writer, it can feel intimidating to even try. When aspiring writers look for programs to help with memoir writing, they're faced with limited options.
+            Everyone has a story worth telling, but if you&rsquo;re not a writer, it can feel intimidating to even try. When aspiring writers look for programs to help with memoir writing, they&rsquo;re faced with limited options.
           </p>
           <p style={{ fontSize: 19, lineHeight: 1.7, color: COLORS.textLight, marginBottom: 24 }}>
             <strong style={{ color: COLORS.text }}>Option one</strong> sends you weekly, unrelated writing prompts, collects your answers, and prints them up as a book. The result is a scrapbook of disconnected memories—not a memoir. 
@@ -121,7 +121,7 @@ export default function LandingPage() {
             <strong style={{ color: COLORS.text }}>Option two</strong> has AI do the writing for you, resulting in prose that sounds like a machine, not like you. Your voice disappears into the algorithm.
           </p>
           <p style={{ fontSize: 19, lineHeight: 1.7, color: COLORS.textLight }}>
-            Both leave the writer in the same place: with a collection of memories and no guidance as to how to shape them into a story.
+            Both end in the same place: a collection of memories, and no guidance on how to shape them into a story
           </p>
         </FadeSection>
       </section>
@@ -140,7 +140,7 @@ export default function LandingPage() {
             lineHeight: 1.6,
             fontStyle: "italic",
           }}>
-            Throughline Memoir is built on a different belief: that the writer's voice is sacred, and the hardest part of memoir isn't the writing—it's uncovering what the story is actually about.
+            Throughline Memoir is built on a different belief: that the writer&rsquo;s voice is sacred, and the hardest part of memoir isn&rsquo;t the writing—it&rsquo;s uncovering what the story is actually about.
           </p>
         </FadeSection>
       </section>
@@ -185,7 +185,7 @@ export default function LandingPage() {
               {
                 number: "02",
                 title: "You receive personalized prompts",
-                description: "Each week, a prompt designed specifically for you. Not generic questions, but prompts that respond to what you've actually written, guiding you deeper into your material.",
+                description: "Each week, a prompt designed specifically for you. Not generic questions, but prompts that respond to what you’ve actually written, guiding you deeper into your material.",
               },
               {
                 number: "03",
@@ -195,17 +195,17 @@ export default function LandingPage() {
               {
                 number: "04",
                 title: "The system pays attention",
-                description: "Editorial analysis tracks the themes, patterns, and connections in your writing—things you might not see yet. It helps you find the throughline: the thread running through everything you've written.",
+                description: "Editorial analysis tracks the themes, patterns, and connections in your writing—things you might not see yet. It helps you find the throughline: the thread running through everything you’ve written.",
               },
               {
                 number: "05",
                 title: "Your book takes shape",
-                description: "Over time, your scattered entries become connected material. Chapters emerge. Structure reveals itself. The story you didn't even know you were writing comes into focus.",
+                description: "Over time, your scattered entries become connected material. Chapters emerge. Structure reveals itself. The story you didn’t even know you were writing comes into focus.",
               },
               {
                 number: "06",
                 title: "You hold your finished book",
-                description: "When you're ready, a professionally designed and published book—your story, in your voice, with your name on the cover.",
+                description: "When you’re ready, a professionally designed and published book—your story, in your voice, with your name on the cover.",
               },
             ].map((step) => (
               <div key={step.number} style={{
@@ -271,12 +271,12 @@ export default function LandingPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 36 }}>
             {[
               {
-                heading: "Your voice, not AI's",
-                text: "We don't write for you. We don't rewrite what you've written. Our editorial analysis finds the patterns in your words. You do all the writing.",
+                heading: "Your voice, not AI’s",
+                text: "We don’t write for you. We don’t rewrite what you’ve written. Our editorial analysis finds the patterns in your words. You do all the writing.",
               },
               {
                 heading: "Prompts that actually know you",
-                text: "Not \"what's your favorite childhood memory.\" Prompts built from your intake answers and shaped by what you've already written. Each one takes you deeper into your specific territory.",
+                text: "Not \"what’s your favorite childhood memory.\" Prompts built from your intake answers and continually shaped by what you write. Each one takes you deeper into your specific territory.",
               },
               {
                 heading: "A real book at the end",
@@ -284,7 +284,7 @@ export default function LandingPage() {
               },
               {
                 heading: "Your work is safe here",
-                text: "Your writing is yours. It will never be used to train AI. It will never be shared, sold, or made public without your permission. The editorial analysis that powers your personalized prompts was built by a working writer and editor with 20 years of memoir expertise—not scraped from other people's books.",
+                text: "Your writing is yours. It will never be used to train AI. It will never be shared, sold, or made public without your permission. The editorial analysis that powers your personalized prompts was built by a working writer and editor with 20 years of memoir expertise—not scraped from other people’s books.",
               },
             ].map((item, i) => (
               <div key={i}>
@@ -328,22 +328,22 @@ export default function LandingPage() {
             color: COLORS.accent,
             marginBottom: 32,
           }}>
-            Who it's for
+            Who it’s for
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 40 }}>
             {[
               {
                 name: "The parent with stories to preserve",
-                text: "She's lived a remarkable life and her children want to capture it before the details fade. She did Storyworth and loved the writing but was disappointed by the book. She deserves more than a printed stack of email replies.",
+                text: "She’s lived a remarkable life and her children want to capture it before the details fade. She did Storyworth and loved the writing process but was disappointed when it ended. She deserves more than a printed stack of email replies.",
               },
               {
                 name: "The retiree who always meant to write",
-                text: "He's been saying \"I should write a book\" for twenty years. He has the stories. What he doesn't have is structure, guidance, or a clear path from \"I want to write\" to a finished manuscript. He needs someone to help him start—and keep going.",
+                text: "He’s been saying \“I should write a book\” for twenty years. He has the stories. What he doesn’t have is structure, guidance, or a clear path from \“I want to write\” to a finished manuscript. He needs someone to help him start—and keep going.",
               },
               {
                 name: "The writer processing something big",
-                text: "She's carrying a story—grief, a life transition, an experience that changed everything. She's tried journaling and writing workshops, but she needs more than prompts. She needs a system that pays attention to what she's written, finds the thread, and helps her shape it into something real.",
+                text: "She’s carrying a story—grief, a life transition, an experience that changed everything. She’s tried journaling and writing workshops, but she needs more than prompts. She needs a system that pays attention to what she’s written, finds the thread, and helps her shape it into something real.",
               },
             ].map((persona, i) => (
               <div key={i} style={{
@@ -393,7 +393,7 @@ export default function LandingPage() {
             Our story
           </h2>
           <p style={{ fontSize: 19, lineHeight: 1.8, marginBottom: 24 }}>
-            Throughline Memoir was born when a writer watched her mother—a woman with Parkinson's disease, in assisted living—light up while answering weekly writing prompts. The memories were vivid. The voice was unmistakably hers. But then the year of writing prompts ended, and the product that collected those answers couldn't do anything with them. Couldn't help her find the thread. Couldn't help her tell a whole story. Couldn't help her craft the memoir inside the memories.
+            Throughline Memoir was born when a writer watched her mother—a woman with Parkinson&rsquo;s disease, in assisted living—light up while answering weekly writing prompts. The memories were vivid. The voice was unmistakably hers. But then the year of writing prompts ended, and the product that collected those answers couldn&rsquo;t do anything with them. Couldn&rsquo;t help her find the thread. Couldn&rsquo;t help her tell a whole story. Couldn&rsquo;t help her craft the memoir inside the memories.
           </p>
           <p style={{ fontSize: 19, lineHeight: 1.8, marginBottom: 24 }}>
             So she and her sisters decided to build what should have existed all along: a guided writing program that helps people discover what their story is really about, and a publishing company that turns the finished manuscript into a real book.
@@ -418,7 +418,7 @@ export default function LandingPage() {
             fontStyle: "italic",
             marginBottom: 16,
           }}>
-            We're launching soon.
+            We’re launching soon.
           </h2>
           <p style={{
             fontSize: 19,
