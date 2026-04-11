@@ -121,7 +121,7 @@ export default function LandingPage() {
             <strong style={{ color: COLORS.text }}>Option two</strong> has AI do the writing for you, resulting in prose that sounds like a machine, not like you. Your voice disappears into the algorithm.
           </p>
           <p style={{ fontSize: 19, lineHeight: 1.7, color: COLORS.textLight }}>
-            Both end in the same place: a collection of memories, and no guidance on how to shape them into a story
+            Both end in the same place: a collection of memories, and no guidance on how to shape them into a story.
           </p>
         </FadeSection>
       </section>
@@ -140,7 +140,7 @@ export default function LandingPage() {
             lineHeight: 1.6,
             fontStyle: "italic",
           }}>
-            Throughline Memoir is built on a different belief: that the writer&rsquo;s voice is sacred, and the hardest part of memoir isn&rsquo;t the writing—it&rsquo;s uncovering what the story is actually about.
+            Throughline Memoir is built on a different belief: that the hardest part of memoir isn&rsquo;t the writing—it&rsquo;s uncovering what the story is actually about.
           </p>
         </FadeSection>
       </section>
