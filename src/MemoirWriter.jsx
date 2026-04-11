@@ -181,7 +181,7 @@ export default function MemoirWriter() {
             Beautifully done.
           </h1>
           <p style={{ fontSize: 19, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 8px" }}>
-            You wrote {wordCount} words this week.
+            You wrote {wordCount} word{wordCount === 1 ? "" : "s"} this week.
           </p>
           <p style={{ fontSize: 17, lineHeight: 1.6, color: COLORS.textLight, margin: "0 0 40px" }}>
             Everything is saved. You can close this page, or come back anytime to keep writing.

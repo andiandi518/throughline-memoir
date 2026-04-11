@@ -180,9 +180,19 @@ export default function MemoirReader() {
               </div>
             )}
 
-            <p style={{
-              fontSize: 15, color: COLORS.textLight, fontFamily: "'Inter', sans-serif", marginBottom: 16,
-            }}>{formatDate(entry.date)}</p>
+            <div style={{
+              display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16,
+            }}>
+              <p style={{
+                fontSize: 15, color: COLORS.textLight, fontFamily: "'Inter', sans-serif", margin: 0,
+              }}>{formatDate(entry.date)}</p>
+              <button onClick={() => { window.location.href = "/?entry=" + entry.id; }} style={{
+                padding: "8px 20px", borderRadius: 8, border: "1px solid " + COLORS.border,
+                backgroundColor: "transparent", color: COLORS.textLight, fontSize: 14,
+                fontFamily: "'Inter', sans-serif", cursor: "pointer",
+                transition: "all 0.2s ease",
+              }}>Edit</button>
+            </div>
 
             <div style={{ marginBottom: 48 }}>
               {entry.response.split("\n\n").map((paragraph, i) => (
@@ -238,9 +248,19 @@ export default function MemoirReader() {
                     </p>
                   </div>
                 )}
-                <p style={{
-                  fontSize: 14, color: COLORS.textLight, fontFamily: "'Inter', sans-serif", marginBottom: 14,
-                }}>{formatDate(e.date)}</p>
+                <div style={{
+                  display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14,
+                }}>
+                  <p style={{
+                    fontSize: 14, color: COLORS.textLight, fontFamily: "'Inter', sans-serif", margin: 0,
+                  }}>{formatDate(e.date)}</p>
+                  <button onClick={() => { window.location.href = "/?entry=" + e.id; }} style={{
+                    padding: "8px 20px", borderRadius: 8, border: "1px solid " + COLORS.border,
+                    backgroundColor: "transparent", color: COLORS.textLight, fontSize: 14,
+                    fontFamily: "'Inter', sans-serif", cursor: "pointer",
+                    transition: "all 0.2s ease",
+                  }}>Edit</button>
+                </div>
                 {e.response.split("\n\n").map((paragraph, j) => (
                   <p key={j} style={{ fontSize: 21, lineHeight: 1.75, margin: "0 0 22px", color: COLORS.text }}>
                     {paragraph}
