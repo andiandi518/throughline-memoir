@@ -6,7 +6,7 @@ import MemoirFreeWrite from "./MemoirFreeWrite";
 import LandingPage from "./LandingPage";
 
 export default function App() {
-  const [page, setPage] = useState("landing");
+  const [page, setPage] = useState(null);
 
   useEffect(() => {
     const handleRoute = () => {
@@ -24,6 +24,7 @@ export default function App() {
     return () => window.removeEventListener("hashchange", handleRoute);
   }, []);
 
+  if (page === null) return null;
   if (page === "read") return <MemoirReader />;
   if (page === "intake") return <MemoirIntake />;
   if (page === "freewrite") return <MemoirFreeWrite />;
