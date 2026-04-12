@@ -39,6 +39,15 @@ const QUESTIONS = [
     placeholder: "Your email address"
   },
   {
+    id: "age",
+    field: "Age",
+    type: "text",
+    title: "Before we begin...",
+    question: "How old are you?",
+    subtitle: "",
+    placeholder: "Your age"
+  },
+  {
     id: "experience",
     field: "Writing Experience",
     type: "single",
