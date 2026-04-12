@@ -284,7 +284,7 @@ export default function LandingPage() {
               },
               {
                 heading: "Your work is safe here",
-                text: "Your writing is yours. It will never be used to train AI. It will never be shared, sold, or made public without your permission. The editorial analysis that powers your personalized prompts was built by a working writer and editor with 20 years of memoir expertise—not scraped from other people’s books.",
+                text: "Your work is safe here. Your writing is yours. It will never be used to train AI, never shared, sold, or compiled into a dataset. Our editorial methodology was developed by a working writer and editor with 20 years of memoir expertise. You control what happens with your work at every stage, and nothing is ever published without your choice.",
               },
             ].map((item, i) => (
               <div key={i}>
