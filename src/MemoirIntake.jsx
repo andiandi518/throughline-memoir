@@ -61,6 +61,50 @@ const QUESTIONS = [
     ]
   },
   {
+    id: "existing_project",
+    field: "Existing Project",
+    type: "long",
+    title: "Tell us more",
+    question: "Tell us about what you’re working on. What’s the story you want to tell?",
+    subtitle:
+      "A paragraph or two is plenty. What’s it about? What drew you to it?",
+    placeholder: "What you’re working on...",
+    showIf: (answers) => answers.experience === "Yes — I’ve been working on a memoir or personal essays"
+  },
+  {
+    id: "existing_material",
+    field: "Existing Material",
+    type: "long",
+    title: "What you already have",
+    question: "Do you have existing material—notes, drafts, a chronology, journal entries?",
+    subtitle:
+      "Tell us what you have and how far along you feel.",
+    placeholder: "What you have so far...",
+    showIf: (answers) => answers.experience === "Yes — I’ve been working on a memoir or personal essays"
+  },
+  {
+    id: "story_meaning",
+    field: "Story Meaning",
+    type: "long",
+    title: "The deeper question",
+    question: "What do you think this story is about—not just what happened, but what it means to you?",
+    subtitle:
+      "It’s okay if you’re not sure yet. Put down whatever feels true right now.",
+    placeholder: "What it means...",
+    showIf: (answers) => answers.experience === "Yes — I’ve been working on a memoir or personal essays"
+  },
+  {
+    id: "connecting_material",
+    field: "Connecting Material",
+    type: "long",
+    title: "The wider story",
+    question: "Is there material from other parts of your life—childhood, family, other experiences—that you think connects to this story?",
+    subtitle:
+      "Even if you’re not sure how yet. Sometimes the connections become clear through the writing.",
+    placeholder: "What else might connect...",
+    showIf: (answers) => answers.experience === "Yes — I’ve been working on a memoir or personal essays"
+  },
+  {
     id: "what_comes",
     field: "What Comes to Mind",
     type: "long",
@@ -219,9 +263,19 @@ export default function MemoirIntake() {
   const [isComplete, setIsComplete] = useState(false);
   const textareaRef = useRef(null);
 
-  const question = QUESTIONS[currentStep];
-  const totalSteps = QUESTIONS.length;
-  const progress = (currentStep / totalSteps) * 100;
+  // Filter to only the questions visible based on current answers.
+  // Questions without a showIf are always visible. Questions with a
+  // showIf are only included when the condition evaluates true.
+  const visibleQuestions = QUESTIONS.filter(
+    (q) => !q.showIf || q.showIf(answers)
+  );
+
+  // Clamp currentStep to the visible range in case a condition change
+  // shrinks the list past our current position.
+  const safeStep = Math.min(currentStep, visibleQuestions.length - 1);
+  const question = visibleQuestions[safeStep];
+  const totalSteps = visibleQuestions.length;
+  const progress = (safeStep / totalSteps) * 100;
 
   const currentAnswer = answers[question.id] || (question.type === "multi" ? [] : "");
 
@@ -249,8 +303,8 @@ export default function MemoirIntake() {
   };
 
   const goNext = () => {
-    if (currentStep < totalSteps - 1) {
-      setCurrentStep(currentStep + 1);
+    if (safeStep < totalSteps - 1) {
+      setCurrentStep(safeStep + 1);
       setTimeout(() => {
         if (textareaRef.current) textareaRef.current.focus();
       }, 100);
@@ -260,7 +314,7 @@ export default function MemoirIntake() {
   };
 
   const goBack = () => {
-    if (currentStep > 0) setCurrentStep(currentStep - 1);
+    if (safeStep > 0) setCurrentStep(safeStep - 1);
   };
 
   const submitIntake = async () => {
@@ -409,9 +463,9 @@ export default function MemoirIntake() {
             margin: 0,
             fontFamily: "'Inter', sans-serif"
           }}>
-          {currentStep + 1} of {totalSteps}
+          {safeStep + 1} of {totalSteps}
         </p>
-        {currentStep > 0 && (
+        {safeStep > 0 && (
           <button
             onClick={goBack}
             style={{
@@ -615,9 +669,9 @@ export default function MemoirIntake() {
         )}
         {/* Back / Next buttons */}
         <div style={{ marginTop: 32, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          {currentStep > 0 ? (
+          {safeStep > 0 ? (
             <button
-              onClick={() => setCurrentStep(currentStep - 1)}
+              onClick={() => setCurrentStep(safeStep - 1)}
               style={{
                 padding: "16px 28px",
                 borderRadius: 10,
@@ -651,7 +705,7 @@ export default function MemoirIntake() {
               minHeight: 52,
               transition: "all 0.2s ease"
             }}>
-            {isSubmitting ? "Saving..." : currentStep === totalSteps - 1 ? "Finish" : "Next"}
+            {isSubmitting ? "Saving..." : safeStep === totalSteps - 1 ? "Finish" : "Next"}
           </button>
         </div>
       </div>
