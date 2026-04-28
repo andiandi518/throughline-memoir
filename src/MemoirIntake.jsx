@@ -78,7 +78,7 @@ const QUESTIONS = [
     title: "What you already have",
     question: "Do you have existing material—notes, drafts, a chronology, journal entries?",
     subtitle:
-      "Tell us what you have and how far along you feel.",
+      "For now, just describe what you have—a journal, a chapter, a folder of notes, a chronology. You don’t have to share it yet.",
     placeholder: "What you have so far...",
     showIf: (answers) => answers.experience === "Yes — I’ve been working on a memoir or personal essays"
   },
@@ -109,7 +109,7 @@ const QUESTIONS = [
     field: "What Comes to Mind",
     type: "long",
     title: "Starting to think",
-    question: "When you imagine writing about your life, what comes to mind first?",
+    question: "When you imagine writing about your life, what draws you to it? Is there something you want to understand, something you want to preserve, something you’ve been carrying—or just an interest you can’t quite name yet?",
     subtitle:
       "Write whatever surfaces—a time period, a person, a place, an image, a feeling. There’s no wrong answer. If nothing specific comes to mind, that’s okay, too—just describe what draws you to the idea of writing about your life.",
     placeholder: "Whatever comes to mind..."
@@ -137,10 +137,10 @@ const QUESTIONS = [
     id: "place",
     field: "First place you see",
     type: "long",
-    title: "A first image",
-    question: "Think about the first place that comes to mind when you think about your story.",
+    title: "A first place",
+    question: "Is there a place that keeps surfacing when you think about your story—somewhere you find yourself returning to, in memory or thought?",
     subtitle:
-      "What do you notice—a sound, a smell, something you can feel, something you can see? Describe whatever comes to you, in whatever sense it arrives.",
+      "What do you notice about it—a sound, a smell, something you can feel, something you can see? Describe whatever comes to you, in whatever sense it arrives.",
     placeholder: "The place that comes to mind..."
   },
   {
@@ -197,7 +197,7 @@ const QUESTIONS = [
     field: "What you hope for",
     type: "multi",
     title: "What you hope for",
-    question: "What do you hope happens when you're done?",
+    question: "What do you hope happens when you’re done?",
     subtitle: "Choose as many as feel right.",
     options: [
       "I want a record of my life for my family",
@@ -236,6 +236,16 @@ const QUESTIONS = [
     placeholder: "Your relationship with writing..."
   },
   {
+    id: "relationship",
+    field: "How do you remember",
+    type: "long",
+    title: "How do you remember?",
+    question: "Is there anything about how you remember things—or how you don’t—that’s worth noting?",
+    subtitle:
+      'Memoir is built from memory, and people remember in very different ways. Some have vivid mental imagery; others have none. Some recall whole stretches of their lives in detail; for others, large periods are blank or fragmented. There\’s no right answer, and you don\’t have to share more than feels comfortable.',
+    placeholder: "What surfaces when you think about how memory works for you?"
+  },
+  {
     id: "time",
     field: "Time per week",
     type: "single",
@@ -248,7 +258,7 @@ const QUESTIONS = [
     field: "Anything else",
     type: "long",
     title: "One last thing",
-    question: "Is there anything else you’d like to share before we start?",
+    question: "Is there anything else that feels important to share before getting started?",
     subtitle:
       "Anything at all. Something you’re excited about, something you’re nervous about, a story you’ve been carrying, a question you have.",
     placeholder: "Whatever you’d like to share...",
